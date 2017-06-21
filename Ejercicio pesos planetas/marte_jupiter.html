@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu peso en otros planetas</title>
+</head>
+<body>
+    <h1>La calculadora de pesos del Universo</h1>
+    
+    <script>
+    var usuario = prompt("Cual es tu peso ?");
+    var planeta = parseInt(prompt("Elige tu planeta\n1 es marte, 2 jupiter:"));
+    var peso = parseInt(usuario);
+    var g_tierra = 9.8;
+    var g_marte = 3.7;
+    var g_jupiter = 24.8;
+    var nombre;
+    var peso_final;
+    if (planeta == 1){
+        peso_final = peso * g_marte / g_tierra;
+        nombre = "Marte";
+    }
+    else if (planeta == 2){
+        peso_final = peso * g_jupiter / g_tierra;
+        nombre = "Jupiter";
+    }
+    else{
+        document.write("Te estas quedando conmigo mostro.");
+    }
+    
+    document.write("Tu peso en " + nombre + " es <strong>" + parseInt(peso_final) + " Kilos.</strong>");
+    </script>
+</body>
+</html>
